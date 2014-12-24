@@ -1,6 +1,6 @@
 'use strict';
 
-let model = {
+var model = {
   name: 'Quramy',
   age: 30,
   favorites: [],
@@ -41,6 +41,10 @@ Object.observe(model.favorites, changes => {
   });
 });
 
+console.log('push');
 model.favorites.push('Ecma Script');
+console.log('push');
+model.favorites.push('ActionScript');
 
-
+console.log('splice');
+model.favorites.splice(0, 1);
