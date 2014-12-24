@@ -1,3 +1,10 @@
 {
-  "name": "es7study"
+  "name": "es7study",
+  "devDependencies": {
+    "browser-sync": "^1.8.2",
+    "gulp": "^3.8.10",
+    "gulp-load-plugins": "^0.8.0",
+    "require-dir": "^0.1.0",
+    "util": "^0.10.3"
+  }
 }
