@@ -63,8 +63,11 @@
         if(!mode){
           builder.push(model => part);
         }else{
-          targetProps.indexOf(part) < 0 && targetProps.push(part);
-          builder.push(model => model[part]);
+          let parsed = util.parse(part);
+          builder.push(parsed);
+          parsed.depends.forEach(prop => {
+            (targetProps.indexOf(prop) === -1) && targetProps.push(prop)
+          });
         }
       }
     });
